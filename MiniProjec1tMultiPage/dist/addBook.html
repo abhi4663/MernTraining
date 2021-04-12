@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="addBook-style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AddBook</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="main">
+        <marquee direction="right">Book Management System</marquee>
+    </div>
+
+    <div class="subhead">
+        <a href="./index.html"><i class="far fa-home"></i>Home</a>
+    </div>
+
+    <section>
+        <div class="add_book_details">
+            <form>
+                <label>Book Name:</label>
+                <input type="text" id="book_name" name="book_name" placeholder="Enter Book Name" required /></br></br></br>
+                <label>Book Author:</label>
+                <input type="text" id="author" name="author" placeholder="Enter Book Author" required /></br></br></br>
+                <label>Book Rating:</label>
+                <input type="number" min="0" max="5" name="rating" id="rating" placeholder="Enter Book Rating" required/></br></br></br>
+                <button id="submit" type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+    <script type="module" src="addBooks.js"></script>
+</body>
+
+</html>

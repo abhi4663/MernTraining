@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Management System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+
+  <div class="main">
+    <marquee direction="right">Book Management System</marquee>
+  </div>
+
+  <div class="subhead">
+    <a href="./addBook.html">AddBook</a>
+  </div>
+
+  <section id="details_section">
+    <div id="search-bar-div">
+      <select class="dropbtn" id="dropdown">
+        <option value="selected">select any one</option>
+        <option value="book_id">Id</option>
+        <option value="book_name">Title</option>
+        <option value="book_author">Author</option>
+      </select>
+      <input type="text" id="searchBar" name="search" placeholder="Search by Id,Name or Author" />
+      <button id="search-button">
+        Search <i class="fa fa-search" style="color: white"></i>
+      </button>
+    </div>
+    <hr style="border: 1px solid #ddd" />
+    <div class="table-main">
+    <table id="book-details" style="border-radius: 5px"></table>
+    </div>
+  </section>
+
+  <script type="module" src="index.js"></script>
+  <script type="module" src="search.js"></script>
+  <script type="module" src="deleteRow.js"></script>
+
+</body>
+
+</html>
