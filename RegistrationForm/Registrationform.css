@@ -1,0 +1,40 @@
+body{
+  background-color: violet;
+  padding: 36px;
+  font-size: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: italic;
+}
+.main
+{
+    background-color: skyblue;
+    padding: 20px;
+    border-radius: 20px;
+    width: 660px;
+    position: relative;
+    left: 268px;
+}
+[type="text"],[type="email"],[type="password"]{
+    position: relative;
+    height: 40px;
+    width: 650px;
+    background-color:bisque;
+    border: none;
+}
+#address{
+    background-color: bisque;
+    border: none;
+}
+button{
+    background-color: green;
+    padding: 15px;
+    position: relative;
+    width: 655px;
+    font-size: 20px;
+    color: white;
+}
+button:hover
+{
+    background-color:red;
+    opacity: 0.6;
+}
