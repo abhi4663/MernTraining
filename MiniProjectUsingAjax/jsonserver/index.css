@@ -1,0 +1,145 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../Images/Books.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.book{
+    background-color: cyan;
+    height: 20px;
+}
+/* .main
+{
+    background-color:inherit;
+    height: 45px;
+} */
+marquee
+{
+    position: relative;
+    top: 9px;
+    font-size: 35px;
+    font-style: italic;
+    color: white;
+}
+.row
+{
+    background-color: white;
+    height:300px;
+    width: 500px;
+    position: relative;
+    left: 507px;
+    top:-150px;
+    opacity: 0.7;
+    text-align: center;
+}
+.enter
+{
+    background-color: coral;
+    height: 460px;
+    width: 400px;
+    position: relative;
+    left: 530px;
+    top: 78px;
+    opacity: 0.7;
+    border-radius: 25px;
+}
+label{
+    font-weight: 600;
+    position: relative;
+    left: 140px;
+    font-style: italic;
+    top:8px;
+}
+input{
+    position: relative;
+    left: 58px;
+    height: 25px;
+    width: 300px;
+    border-radius: 7px;
+    text-indent: 20px;
+}
+.search
+{
+    background-color:white;
+    height: 50px;
+    width: 37%;
+    position: relative;
+    top:-151px;
+    left: 508px;
+    opacity: 0.7;
+}
+th{
+    background-color: black;
+    color: white;
+    font-size: medium;
+
+}
+.subhead{
+    text-align: right;
+}
+.subhead a{
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 20px;
+    background-color: lightcyan;
+}
+hr{
+    position: relative;
+    top: -10px;
+}
+button{
+    position: relative;
+    right: -59px;
+    top: -10px;
+    background-color: orangered;
+    color: white;
+    border-radius: 5px;
+    width: 300px;
+    height: 30px;
+    border: 2px solid white;
+}
+button:hover{
+    background-color: rgb(139, 46, 66);
+}
+#tab{
+    background-color: ivory;
+}
+.search{
+    position: static;
+    color: ivory;
+    background-position: inherit;
+    width: 1500px;
+    background-color: white;
+    opacity: 1;
+}
+.search input{
+    position: relative;
+    left: 100px;
+    top: -12px;
+    width: 542px;
+    height: 30px;
+}
+#butn{
+    position: relative;
+    left: 123px;
+    top: -13px;
+    width: 150px;
+    background-color: tomato;
+}
+.delete{
+    position: relative;
+    left: 10px;
+    top: 10px;
+    width: 80px;
+}
+.details{
+    position: relative;
+    left: 10px;
+    top: 10px;
+    width: 80px;
+}

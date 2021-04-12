@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Management System</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>  
+
+    <div class="main">
+          <marquee direction="right">Book Management System</marquee>   
+    </div>  
+
+    <div class="subhead">
+        <a href="./bookList.html" target="_blank">BookList</a> 
+    </div>
+<form action="./bookList.html" id="form" method="POST">
+  <div class="enter">
+    <label id="bookInfo"> Enter Book Details </label></br></br>
+  <hr>
+    <input type="text" id="inputTitle" placeholder="Enter Isbn"></br></br>
+    <input type="text" id="inputAuthor" placeholder="Enter Title"></br></br>
+    <input type="number" id="inputReview" placeholder="Enter Author"></br></br>
+    <input type="number" id="inputReview" placeholder="Enter Pages"></br></br>
+    <input type="number" id="inputReview" placeholder="Enter Price"></br></br>
+    <input type="number" id="inputReview" placeholder="Enter Rating"></br></br>
+    <input type="number" id="inputReview" placeholder="Enter Tags"></br></br>
+    <input type="number" id="inputReview" placeholder="Enter Series"></br></br>
+    <input type="text" id="inputReview" placeholder="Enter Votes"></br></br>
+    <div id="submit">
+        <button id="submit">Submit</button>
+    </div>
+  </div>  
+</form>
+  <script>
+    // var form=document.getElementById('form');
+    // form.addEventListener('submit',function(e){
+
+    //   e.preventDefault()
+
+    //   var title=document.getElementById('inputTitle');
+    //   var author=document.getElementById('inputAuthor');
+    //   var isbn=document.getElementById('inputReview');
+
+    //   fetch("http://localhost:3000/books",{
+    //     method:'POST',
+    //     body:JSON,stringify({
+    //       isbn:tittle,
+    //       title:author,
+    //       author:isbn
+    //     }),
+    //     headers:{
+    //       "Conent-Type":"application/json; charset=UTF-8"
+    //     }
+    //   })
+    //   .then(function(responce){
+    //     return responce.json()
+    //   })
+    //   .then(function(data){
+    //     console.log(data);
+    //   })
+    // })
+  </script>
+</body>
+</html>
