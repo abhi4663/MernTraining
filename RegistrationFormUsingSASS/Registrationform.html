@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrationform</title>
+    <link rel="stylesheet" href="./registration.css">
+</head>
+<body>
+    <div class="main">
+        <marquee behavior="" direction="right">Student Registration Form</marquee><br/>
+        <hr>
+        <form action="" method="GET">
+            <label for="fname">First Name:*</label><br/>
+            <input id="fname" type="text" required placeholder="First Name"><br/>
+
+            <label for="mname">Middle Name:</label><br/>
+            <input type="text" id="mname" placeholder="Middle Name"><br/>
+
+            <label for="lname">Last Name:*</label><br/>
+            <input type="text" id="lname" required placeholder="Last Name"><br/>
+    
+            <label for="option">Course:</label>
+            <select name="" id="option">
+                <option value="">Course</option>
+                <option value="">HTML</option>
+                <option value="">CSS</option>
+                <option value="">JavaScript</option>
+            </select><br/>
+            Gender:<br/>
+        
+            <input id="M" type="radio" name="Gender" required/>
+            <label for="M">Male</label>
+
+            <input id="F" type="radio" name="Gender" required/>
+            <label for="F">Female</label>
+
+            <input id="O" type="radio" name="Gender" required/>
+            <label for="O">Other</label><br/>
+
+            <label for="Phone">Phone No.:</label><br/>
+            <input type="text" id="Phone" placeholder="Phone number"><br/>
+
+            <label for="address">Address:</label><br/>
+            <textarea id="address" cols="90" rows="10" placeholder="Current Address"></textarea><br/>
+
+            <label for="mail">Email:</label><br/>
+            <input id="mail" type="email" required placeholder="Enter Email"><br/>
+
+            <label for="password">Password:</label><br/>
+            <input type="password" id="password" required placeholder="Enter Password"><br/>
+
+            <label for="pass">RetypePassword:</label><br/>
+            <input type="text" id="pass" required placeholder="Retype Password"><br/><br/>
+
+             <button>Register</button>
+        
+        </form>
+    </div>
+</body>
+</html>

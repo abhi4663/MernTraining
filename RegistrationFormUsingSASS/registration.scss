@@ -1,0 +1,53 @@
+$colors:(
+    vio:violet,
+    sky:skyblue,
+    bis:bisque,
+    gree:green,
+    whit:white,
+    redd:red
+);
+@function color($color_name){
+    @return map-get($colors,$color_name);
+}
+$size:20px;
+body{
+    background-color: color(vio);
+    padding: 36px;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+
+    .main
+   {
+    background-color:map-get($colors,sky) ;
+    padding: $size;
+    border-radius: $size;
+    width: 660px;
+    position: relative;
+    left: 268px;
+  }
+  [type="text"],[type="email"],[type="password"]{
+    position: relative;
+    height: $size*2;
+    width: 650px;
+    background-color:color(bis);
+    border: none;
+}
+#address{
+    background-color: color(bis);
+    border: none;
+}
+button{
+    background-color: color(gree);
+    padding: $size-5;
+    position: relative;
+    width: 655px;
+    font-size: $size;
+    color: color(whit);
+}
+button:hover
+{
+    background-color:color(redd);
+    opacity: 0.6;
+}
+  }
