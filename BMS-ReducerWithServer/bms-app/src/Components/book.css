@@ -1,0 +1,432 @@
+* {
+  padding: 0%;
+  margin: 0;
+  /* background-color: plum; */
+
+  /* background-image: url("./Books.jpg"); */
+}
+
+/* * body {
+  background: #6b5b95;
+} */
+.add {
+  background-color: aqua;
+  text-align: center;
+  position: relative;
+  top: 100px;
+  border-radius: 183px;
+}
+
+.nav-bar {
+  background-color: black;
+  color: white;
+  height: 50px;
+}
+.nav-bar a {
+  position: relative;
+  left: 1260px;
+  top: 14px;
+  font-size: large;
+  /* font-weight: 700; */
+  /* cursor: pointer; */
+}
+/* img {
+  height: 150px;
+  width: 100px;
+  padding: 5px;
+  border-radius: 10%;
+} */
+.add-book {
+  text-align: right;
+}
+
+.form-group {
+  width: 500px;
+}
+.top {
+  position: relative;
+  right: 460px;
+}
+h4,
+h3 {
+  font-size: 20px;
+  font-style: italic;
+  font-family: math;
+  font-weight: bold;
+  text-align: center;
+  /* text-transform: uppercase; */
+}
+a {
+  color: black;
+}
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+.box {
+  float: left;
+  margin: -26px;
+  box-shadow: -1px 4px 20px -6px rgb(0 0 0 / 75%);
+  height: 460px;
+  width: 100px;
+  position: relative;
+  left: 76px;
+}
+.box-image {
+  width: 200px;
+  height: 300px;
+  border-radius: 20px;
+  right: -29px;
+  position: relative;
+  transform: scale(0.8);
+  transition: 0.3s ease-in-out;
+  animation: mymove 5s alternate ease;
+}
+.box-image:hover {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  transform: rotate(0deg);
+}
+@keyframes mymove {
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.box-body {
+  position: relative;
+  top: -21px;
+  right: 11px;
+}
+.signUp-field {
+  width: 503px;
+  height: 439px;
+  text-align: center;
+  position: relative;
+  top: 48px;
+  left: 446px;
+  border-radius: 4%;
+  background-color: white;
+  box-shadow: -1px 4px 20px -6px rgb(0 0 0 / 75%);
+}
+
+.login-field-1 {
+  width: 468px;
+  height: 435px;
+  text-align: center;
+  position: relative;
+  top: 48px;
+  left: 446px;
+  border-radius: 3%;
+  background-color: white;
+  box-shadow: -1px 4px 20px -6px rgb(0 0 0 / 75%);
+  animation: spin 2s;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.fields {
+  position: relative;
+  top: 11px;
+  padding: 10px;
+}
+.Search {
+  position: relative;
+  top: 32px;
+  width: 500px;
+  left: 401px;
+}
+.group {
+  position: relative;
+  left: 382px;
+  top: 80px;
+  background-color: whitesmoke;
+  width: 610px;
+  height: 721px;
+  border-radius: 20px;
+  box-shadow: -1px 4px 20px -6px rgb(0 0 0 / 75%);
+}
+.group h4 {
+  position: relative;
+  top: 15px;
+  left: 25px;
+  font-family: cursive;
+}
+
+.group input,
+label,
+textarea {
+  position: relative;
+  left: 60px;
+  top: 30px;
+}
+.btn1 {
+  position: relative;
+  top: 28px;
+  left: 257px;
+}
+.Select {
+  height: 25px;
+  width: 50px;
+  outline-width: 0;
+  border: none;
+  background-color: #ffffff;
+}
+#inputsearch {
+  width: 293px;
+  border-bottom-left-radius: -49px;
+  height: 41px;
+  border-left-style: outset;
+  border-right-style: outset;
+  border-bottom: ridge;
+}
+.Sliders {
+  height: 500px;
+  border-radius: 1px;
+  /* width: 101%; */
+  padding: 0;
+  margin-top: 28px;
+}
+.search-left {
+  border: 2px solid cornflowerblue;
+  border-right: -4px;
+  background-color: #ffffff;
+  position: relative;
+  right: -3px;
+  height: 44.1px;
+  top: -2.5px;
+}
+.btn-search {
+  width: 69px;
+  height: 40.6px;
+  position: relative;
+  border-left: -20px;
+  right: 1px;
+}
+.details {
+  width: 892px;
+  height: 780px;
+  background-color: antiquewhite;
+  color: brown;
+  box-shadow: -1px 4px 20px -6px rgb(0 0 0 / 75%);
+  position: relative;
+  left: 193px;
+  margin-top: 82px;
+  margin-bottom: 5px;
+}
+.details-img img {
+  height: 299px;
+  width: 219px;
+  position: relative;
+  top: 11px;
+  border-radius: 17px;
+  right: -29px;
+}
+.details-img > h4 {
+  position: absolute;
+  top: 12px;
+  /* justify-content: center; */
+  left: 29px;
+  color: wheat;
+  background: darkslateblueradial-gradient(black, transparent);
+  opacity: 0;
+  height: 297px;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  width: 219px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  border-radius: 13px;
+  transition: opacity 0.15s;
+}
+.details-img > h4:hover {
+  opacity: 1;
+}
+.details-book h4 {
+  text-align: justify;
+  font-family: initial;
+  padding: 2px;
+  position: relative;
+  top: -170px;
+  right: -264px;
+}
+.details-book h3 {
+  text-align: justify;
+  position: relative;
+  top: -156px;
+  margin-left: 31px;
+  margin-right: 17px;
+}
+.details-btn {
+  position: relative;
+  bottom: 137px;
+  right: -23px;
+}
+.bookList1 {
+  background-color: antiquewhite;
+  height: 1300px;
+  box-shadow: -1px 4px 20px -6px rgb(0 0 0 / 75%);
+  margin-top: 60px;
+}
+
+.footer-distributed {
+  background: #666;
+  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 12%);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 32px 30px;
+  height: 209px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+  width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3 {
+  color: #ffffff;
+  font: normal 36px "Open Sans", cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span {
+  color: lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+  color: #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  font-weight: 400;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+  color: #222;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+  width: 35%;
+}
+
+.footer-distributed .footer-center p {
+  display: inline-block;
+  color: #ffffff;
+  font-weight: 400;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+  color: lightseagreen;
+  text-decoration: none;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight: 300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+  margin-top: 9px;
+  padding: -18px;
+  position: relative;
+  right: 13px;
+}
+
+.login-footer {
+  position: relative;
+  top: 107px;
+}
+.reg-footer {
+  position: relative;
+  top: 107px;
+}
+.add-footer {
+  position: relative;
+  top: 107px;
+}
+/* .bookList-Footer {
+  position: relative;
+  top: 1200px;
+} */
+
+.search-details img {
+  height: 251px;
+  width: 168px;
+  border-radius: 15px;
+  position: relative;
+  left: 164px;
+}
