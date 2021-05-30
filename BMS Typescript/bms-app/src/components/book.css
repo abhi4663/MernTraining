@@ -1,0 +1,96 @@
+* {
+  padding: 0%;
+  margin: 0;
+  /* background-color: plum; */
+  /* background-image: url('./Books.jpg'); */
+}
+.add {
+  background-color: aqua;
+  text-align: center;
+  position: relative;
+  top: 100px;
+  border-radius: 183px;
+}
+
+.nav-bar {
+  background-color: black;
+  color: white;
+  height: 50px;
+}
+.nav-bar a {
+  position: relative;
+  left: 1260px;
+  top: 14px;
+  font-size: large;
+  /* font-weight: 700; */
+  /* cursor: pointer; */
+}
+img {
+  height: 150px;
+  width: 100px;
+  padding: 5px;
+  border-radius: 10%;
+}
+.add-book {
+  text-align: right;
+}
+
+.form-group {
+  width: 500px;
+}
+.top {
+  position: relative;
+  right: 460px;
+}
+h4 {
+  font-size: 20px;
+  font-style: italic;
+  font-family: math;
+  font-weight: bold;
+}
+.details {
+  text-align: center;
+}
+a {
+  color: black;
+}
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+.box {
+  float: left;
+  margin: 20px;
+  border: none;
+}
+.box-image {
+  width: 200px;
+  height: 300px;
+  border-radius: 20px;
+}
+.box-body {
+  position: relative;
+  top: -21px;
+  right: 11px;
+}
+.login-field {
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  position: relative;
+  top: 20px;
+  left: 500px;
+  border-radius: 10%;
+  background-color: thistle;
+}
+.fields {
+  position: relative;
+  top: 11px;
+  padding: 10px;
+}
+.Search {
+  position: relative;
+  top: -47px;
+  width: 500px;
+  left: 800px;
+}
