@@ -1,0 +1,69 @@
+.board {
+  margin: 50px;
+  width: 150px;
+  padding: 0px;
+}
+.cell {
+  margin: 0px;
+  width: 86px;
+  height: 62px;
+  max-width: 50px;
+  max-height: 50px;
+  min-height: 50px;
+  min-width: 50px;
+  padding: 0px;
+  font-size: 30px;
+  border-radius: 52px;
+  background-color: tomato;
+}
+.turn {
+  position: relative;
+  top: -210px;
+  right: -250px;
+  font-size: 30px;
+  font-weight: 700;
+}
+.input {
+  position: relative;
+  top: 25px;
+  right: 46px;
+  width: 300px;
+  height: 20px;
+  border: solid 2px black;
+  border-radius: 10px;
+}
+#button1 {
+  position: relative;
+  top: -63px;
+  left: 440px;
+  border-radius: 10px;
+  height: 30px;
+  width: 100px;
+  background-color: burlywood;
+  color: blue;
+}
+button {
+  position: relative;
+  left: 340px;
+  top: -2px;
+  border-radius: 10px;
+  height: 30px;
+  background-color: burlywood;
+  color: blue;
+}
+.header {
+  background-color: black;
+  color: white;
+  height: 50px;
+}
+.inputName {
+  position: relative;
+
+  background-color: thistle;
+}
+/* .table {
+  
+  width: 58%;
+  position: relative;
+  left: 133px;
+} */
