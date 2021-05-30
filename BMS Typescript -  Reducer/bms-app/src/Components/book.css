@@ -1,0 +1,155 @@
+* {
+  padding: 0%;
+  margin: 0;
+  /* background-color: plum; */
+  /* background-image: url("./Books.jpg"); */
+}
+.add {
+  background-color: aqua;
+  text-align: center;
+  position: relative;
+  top: 100px;
+  border-radius: 183px;
+}
+
+.nav-bar {
+  background-color: black;
+  color: white;
+  height: 50px;
+}
+.nav-bar a {
+  position: relative;
+  left: 1260px;
+  top: 14px;
+  font-size: large;
+  /* font-weight: 700; */
+  /* cursor: pointer; */
+}
+img {
+  height: 150px;
+  width: 100px;
+  padding: 5px;
+  border-radius: 10%;
+}
+.add-book {
+  text-align: right;
+}
+
+.form-group {
+  width: 500px;
+}
+.top {
+  position: relative;
+  right: 460px;
+}
+h4 {
+  font-size: 20px;
+  font-style: italic;
+  font-family: math;
+  font-weight: bold;
+  text-align: center;
+  /* text-transform: uppercase; */
+}
+.details {
+  text-align: center;
+}
+a {
+  color: black;
+}
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+.box {
+  float: left;
+  margin: -26px;
+  box-shadow: -1px 4px 20px -6px rgb(0 0 0 / 75%);
+  height: 460px;
+  width: 100px;
+  position: relative;
+  left: 76px;
+}
+.box-image {
+  width: 200px;
+  height: 300px;
+  border-radius: 20px;
+  right: -29px;
+  position: relative;
+}
+
+.box-body {
+  position: relative;
+  top: -21px;
+  right: 11px;
+}
+.login-field {
+  width: 300px;
+  height: 350px;
+  text-align: center;
+  position: relative;
+  top: 20px;
+  left: 500px;
+  border-radius: 10%;
+  background-color: white;
+  box-shadow: -1px 4px 20px -6px rgb(0 0 0 / 75%);
+}
+.login-field-1 {
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  position: relative;
+  top: 20px;
+  left: 500px;
+  border-radius: 10%;
+  background-color: white;
+  box-shadow: -1px 4px 20px -6px rgb(0 0 0 / 75%);
+}
+.fields {
+  position: relative;
+  top: 11px;
+  padding: 10px;
+}
+.Search {
+  position: relative;
+  top: -55px;
+  width: 500px;
+  left: 800px;
+}
+.group {
+  position: relative;
+  left: 309px;
+  top: 33px;
+  background-color: powderblue;
+  width: 610px;
+  height: 721px;
+  border-radius: 53px;
+}
+.group h4 {
+  position: relative;
+  top: 15px;
+  left: 25px;
+  font-family: cursive;
+}
+
+.group input,
+label,
+textarea {
+  position: relative;
+  left: 60px;
+  top: 30px;
+}
+.btn1 {
+  position: relative;
+  top: 28px;
+  left: 257px;
+}
+.Select {
+  height: 25px;
+  width: 40px;
+  outline-width: 0;
+  border: none;
+  background-color: #e9ecef;
+}
+.input1 {
+  width: 300px;
+}

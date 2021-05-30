@@ -1,0 +1,250 @@
+case "SEARCH":
+state.books.map((book)=>{
+    if(book.title.indexOf(action.data)>=0){
+        state.search.push(book)
+    }
+})
+return state
+
+
+case "LOGIN":
+state.users.map((user:any)=>{
+    if(user.email===action.user.username&&user.password===action.user.password)
+    {
+        state.user=true
+    }
+})
+return state
+
+
+
+
+const initialState = {
+    books: [],
+    window: false,
+    deleteWindow: false,
+    regSuccessful: '',
+    loginFailed: '',
+    loginUser: false
+}
+const reducer = (state: any, action: any) => {
+    // console.log(action.payload);
+
+    switch (action.type) {
+        case 'FETCH':
+            return {
+                ...state,
+                window: false,
+                deleteWindow: false,
+                books: action.payload
+            }
+        case 'LOG_OUT':
+            return {
+                ...state,
+                loginUser: false
+            }
+        case 'NEW_USER':
+            return {
+                ...state,
+                window: true,
+                regSuccessful: "done"
+            }
+        case 'INVALIDS':
+            return {
+                ...state,
+                loginUser: false,
+                loginFailed: "error"
+            }
+        case 'VALIDS':
+            return {
+                ...state,
+                loginUser: true,
+                window: true,
+                loginFailed: "Correct"
+            }
+        case 'NEW_BOOK':
+            return {
+                ...state,
+                window: true
+            }
+        case 'DELETES':
+            return {
+                ...state,
+                deleteWindow: true
+            }
+        case 'ABC':
+            return {
+                ...state,
+                window: false
+            }
+        case 'EFG':
+            return {
+                ...state,
+                deleteWindow: false
+            }
+        case 'GHI':
+            return {
+                ...state,
+                loginUser: true
+            }
+        default:
+            return state
+    }
+}
+
+function BookApp(): any {
+
+    const [state, dispatch] = useReducer(reducer, initialState);
+
+    useEffect(() => {
+        if (localStorage.getItem("login")) {
+            dispatch({ type: 'GHI' })
+        }
+        axios.get('http://localhost:5000/books')
+            .then(res => {
+                dispatch({ type: 'FETCH', payload: res.data })
+                // console.log(state);
+
+            })
+            .catch(err => {
+                console.log(err);
+
+            })
+
+    }, [state.window, state.deleteWindow])
+
+
+    const handleNewUser = async (newUser: user) => {
+
+        await axios.post('http://localhost:5000/userdetails/add', newUser);
+        // setSuccessful("done");
+        // setWindow(true);
+        dispatch({ type: 'NEW_USER' })
+    }
+    const handleNewBook = async (newbook: book) => {
+        let token = "Bearer " + localStorage.getItem("login");
+        // const requestOptions = {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //         "Authorization": token
+        //     },
+        //     body: JSON.stringify(newbook)
+        // };
+        const body = JSON.stringify(newbook);
+        await axios.post('http://localhost:5000/books/add', body, {
+            headers: {
+                'Content-Type': 'application/json',
+                "Authorization": token
+            }
+        })
+        // setWindow(true);
+        dispatch({ type: 'NEW_BOOK' })
+    }
+    const ondeleting = async (id: string) => {
+        console.log(id);
+        let token = "Bearer " + localStorage.getItem("login");
+        console.log(token);
+
+        // const requestOptions = {
+        //     method: 'DELETE',
+        //     headers: {
+        //         "Authorization": token
+        //     }
+        // };
+        await axios.delete(`http://localhost:5000/books/${id}`, {
+            headers: {
+                "Authorization": token
+            }
+        })
+        dispatch({ type: 'DELETES' });
+        // console.log(state);
+
+        // setDeleteWindow(true);
+    }
+    const handleUserPassword = async (userName: string, password: string) => {
+        const body = JSON.stringify({ email: userName, password: password });
+
+        const op = await axios.post('http://localhost:5000/userDetails/login', body, {
+            // method: "POST",
+            // body: JSON.stringify({ email: userName, password: password }),
+            headers: { 'Content-Type': 'application/json' }
+        });
+        let op1 = op.data;
+        if (op1 === "Invalid") {
+            // console.log(op1);
+            // setLoginUser(false);
+            // setWindow(true);
+            // setLoginFailed("error");
+            dispatch({ type: 'INVALIDS' })
+            // console.log(state);
+
+        } else {
+            localStorage.setItem("login", op1);
+            // setLoginUser(true);
+            // setWindow(true);
+            // setLoginFailed("Correct")
+            dispatch({ type: 'VALIDS' })
+        }
+        // setWindow(true);
+        console.log(op1);
+    }
+
+    useEffect(() => {
+        // setWindow(false);
+        dispatch({ type: 'ABC' });
+    }, [state.window])
+    useEffect(() => {
+        // setDeleteWindow(false);
+        dispatch({ type: 'EFG' });
+    }, [state.deleteWindow])
+
+
+    const logOut = async () => {
+        //setLoginUser(false);
+        dispatch({ type: 'LOG_OUT' })
+        localStorage.clear();
+    }
+    return (
+        // <div className="main">
+        //     {this.state.window ? this.bookListwindow() : this.bookAddwindow()}
+        // </div>
+        <>
+            <Router>
+                <Navbar bg="primary" variant="dark">
+                    <Navbar.Brand>BMS APP</Navbar.Brand>
+                    <Nav className="mr-auto">
+                        <Nav.Link as={Link} to="/">Home</Nav.Link>
+                        {state.loginUser ? <Nav.Link as={Link} to='/addBook'>AddBook</Nav.Link> : null}
+                        {state.loginUser ? null : <Nav.Link as={Link} to='/register'>Register</Nav.Link>}
+                        {state.loginUser ? null : <Nav.Link as={Link} to="/login">LogIn</Nav.Link>}
+                        {state.loginUser ? <Nav.Link as={Link} to="/" onClick={() => logOut()}>LogOut</Nav.Link> : null}
+
+                    </Nav>
+                </Navbar>
+                <Switch>
+                    <Route exact path='/'>
+                        <BookList list={state.books}></BookList>
+                    </Route>
+                    <Route exact path="/addBook">
+                        <AddBook handleBookInput={(newbook: any) => { handleNewBook(newbook) }}></AddBook>
+                        {state.window ? (<Redirect to='/'></Redirect>) : null}
+                    </Route>
+                    <Route exact path="/register">
+                        <Register success={state.regSuccessful} handleUserInput={(newUser: any) => { handleNewUser(newUser) }}></Register>
+                    </Route>
+                    <Route exact path="/login">
+                        <LogIn valid={state.loginFailed} handleUserNamePasswordInput={(userName, password) => { handleUserPassword(userName, password) }}></LogIn>
+                        {state.window ? (<Redirect to='/'></Redirect>) : null}
+                    </Route>
+                    <Route exact path="/:title">
+                        {state.loginUser ? <BookDetail list={state.books} delete={(_id) => { ondeleting(_id) }}></BookDetail> : <ShowDetails></ShowDetails>}
+                        {state.deleteWindow ? (<Redirect to='/'></Redirect>) : null}
+                    </Route>
+                </Switch>
+            </Router>
+        </>
+
+
+    )
+}
